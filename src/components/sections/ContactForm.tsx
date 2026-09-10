@@ -31,7 +31,7 @@ export function ContactForm() {
 
   return (
     <form action={action} noValidate className="grid gap-4">
-      <div className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+      <div className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
         <label>
           Company
           <input name="company" type="text" tabIndex={-1} autoComplete="off" />
@@ -98,7 +98,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={pending}
-        className="font-display inline-flex w-fit items-center rounded-full bg-white px-[26px] py-[13px] text-[15px] font-semibold text-navy transition-[transform,box-shadow,opacity] duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-8px_rgba(0,0,0,.45)] disabled:cursor-wait disabled:opacity-70 disabled:hover:translate-y-0"
+        className="font-display inline-flex w-fit items-center rounded-full bg-white px-6.5 py-3.25 text-[15px] font-semibold text-navy transition-[transform,box-shadow,opacity] duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-8px_rgba(0,0,0,.45)] disabled:cursor-wait disabled:opacity-70 disabled:hover:translate-y-0"
       >
         {pending ? "Sending…" : "Send message"}
       </button>
