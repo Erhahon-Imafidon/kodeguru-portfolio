@@ -1,4 +1,5 @@
 export const site = {
+  url: "https://kodeguru-portfolio.netlify.app",
   name: "Erhahon Imafidon",
   role: "Software Engineer",
   company: "Kodeguru Tech Solutions",

@@ -4,7 +4,7 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function HowIWork() {
   return (
-    <section className="py-21">
+    <section id="practice" className="py-21">
       <div className="wrap">
         <Reveal>
           <SectionTitle>How I work</SectionTitle>

@@ -5,10 +5,12 @@ import { WhatIDo } from "@/components/sections/WhatIDo";
 import { SelectedWork } from "@/components/sections/SelectedWork";
 import { WhereIveWorked } from "@/components/sections/WhereIveWorked";
 import { HowIWork } from "@/components/sections/HowIWork";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export default function Home() {
   return (
     <>
+      <JsonLd />
       <NavBar />
       <main>
         <Hero />

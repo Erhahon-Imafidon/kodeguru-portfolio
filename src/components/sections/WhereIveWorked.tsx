@@ -4,7 +4,7 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function WhereIveWorked() {
   return (
-    <section className="border-y border-line bg-bg-2 py-21">
+    <section id="experience" className="border-y border-line bg-bg-2 py-21">
       <div className="wrap">
         <Reveal>
           <SectionTitle>Where I&apos;ve worked</SectionTitle>

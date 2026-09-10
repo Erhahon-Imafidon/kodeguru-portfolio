@@ -6,7 +6,7 @@ const btn =
 
 export function Footer() {
   return (
-    <footer>
+    <footer id="contact">
       <div className="wrap">
         <Reveal>
           <div className="grad-bg mt-21 mb-5 rounded-2xl p-[clamp(38px,6vw,60px)] text-white">

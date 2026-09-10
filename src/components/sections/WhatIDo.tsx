@@ -18,7 +18,7 @@ const items = [
 
 export function WhatIDo() {
   return (
-    <section className="border-y border-line bg-bg-2 py-21">
+    <section id="services" className="border-y border-line bg-bg-2 py-21">
       <div className="wrap">
         <Reveal>
           <SectionTitle>What I do</SectionTitle>

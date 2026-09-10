@@ -5,7 +5,7 @@ import { ProjectEntry } from "./ProjectEntry";
 
 export function SelectedWork() {
   return (
-    <section className="py-21">
+    <section id="work" className="py-21">
       <div className="wrap">
         <Reveal>
           <SectionTitle>Selected work</SectionTitle>
