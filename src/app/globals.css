@@ -2,6 +2,8 @@
 
 :root {
   --grad: linear-gradient(120deg, #12457f 0%, #1f9aa6 100%);
+  /* Brighter stops for text on the dark ground; navy #12457f fails contrast there. */
+  --grad-text: linear-gradient(120deg, #5b9be6 0%, #6fc7cf 100%);
   color-scheme: dark;
 }
 
@@ -29,7 +31,7 @@
 }
 
 @utility grad-text {
-  background-image: var(--grad);
+  background-image: var(--grad-text);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
