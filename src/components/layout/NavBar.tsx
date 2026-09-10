@@ -33,7 +33,7 @@ export function NavBar() {
             <span className="hidden font-medium text-ink-soft sm:inline">— {site.role}</span>
           </span>
           <a
-            href={`mailto:${site.email}`}
+            href="#contact"
             className="text-[14.5px] font-medium text-teal-soft transition-colors hover:text-ink"
           >
             Get in touch
