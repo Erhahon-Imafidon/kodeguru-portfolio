@@ -81,7 +81,7 @@ export function HeroGraphic() {
       aria-label="Abstract network of connected nodes"
     >
       <defs>
-        <linearGradient id="hero-grad" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id="hero-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="520" y2="440">
           <stop offset="0%" stopColor="#2B6CB0" />
           <stop offset="100%" stopColor="#1F9AA6" />
         </linearGradient>

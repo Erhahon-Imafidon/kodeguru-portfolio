@@ -32,7 +32,14 @@ function Diagram({ orientation }: { orientation: Orientation }) {
       aria-label="Lead capture workflow: capture, validate, de-duplicate, score, notify"
     >
       <defs>
-        <linearGradient id={gradId} x1="0" y1="0" x2="1" y2="1">
+        <linearGradient
+          id={gradId}
+          gradientUnits="userSpaceOnUse"
+          x1="0"
+          y1="0"
+          x2={width}
+          y2={height}
+        >
           <stop offset="0%" stopColor="#2B6CB0" />
           <stop offset="100%" stopColor="#1F9AA6" />
         </linearGradient>
