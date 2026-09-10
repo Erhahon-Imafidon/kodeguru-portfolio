@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --grad: linear-gradient(120deg, #12457f 0%, #1f9aa6 100%);
+  color-scheme: dark;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: #12457f;
+  --color-teal: #1f9aa6;
+  --color-teal-soft: #6fc7cf;
+  --color-bg: #070d16;
+  --color-bg-2: #0c1622;
+  --color-bg-3: #111e2e;
+  --color-ink: #eaf1f6;
+  --color-ink-soft: #8fa5b5;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-line-soft: rgba(255, 255, 255, 0.05);
+
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", Menlo, monospace;
+
+  --ease-out-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility grad-bg {
+  background-image: var(--grad);
+}
+
+@utility grad-text {
+  background-image: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility wrap {
+  margin-inline: auto;
+  max-width: 1020px;
+  padding-inline: 28px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.link-grow {
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.25s var(--ease-out-soft);
+}
+.link-grow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1.5px;
+  width: 100%;
+  background-image: var(--grad);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.32s var(--ease-out-soft);
+}
+.link-grow:hover {
+  color: var(--color-teal-soft);
+}
+.link-grow:hover::after {
+  transform: scaleX(1);
+}
+
+.bullet-dot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-image: var(--grad);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
