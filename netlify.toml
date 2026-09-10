@@ -1,0 +1,4 @@
+# Next 16 (Turbopack) writes an env snapshot into its build cache, which Netlify's secrets
+# scanner reads and flags. The cache is never published, so exclude it from scanning.
+[build.environment]
+  SECRETS_SCAN_OMIT_PATHS = ".netlify/.next/cache/**,.next/cache/**"
