@@ -117,9 +117,31 @@ export function Hero() {
           <motion.figure
             variants={rise}
             transition={{ duration: 0.9, ease: EASE }}
-            className="mx-auto w-full max-w-[420px] lg:max-w-none"
+            className="relative mx-auto w-full max-w-[360px] lg:ml-auto lg:max-w-[400px]"
           >
-            <HeroGraphic />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-x-[18%] -top-[10%] -bottom-[6%] opacity-60"
+            >
+              <HeroGraphic />
+            </div>
+
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[26px] p-px grad-bg shadow-[0_30px_80px_-30px_rgba(0,0,0,.8)]">
+              <div className="relative h-full w-full overflow-hidden rounded-[25px] bg-bg-2">
+                <Image
+                  src="/erhahon-imafidon.jpg"
+                  alt={`${site.name}, software engineer`}
+                  fill
+                  sizes="(min-width: 1024px) 400px, (min-width: 640px) 360px, 90vw"
+                  className="object-cover"
+                  priority
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(7,13,22,.55)_100%)]"
+                />
+              </div>
+            </div>
           </motion.figure>
         </div>
       </motion.div>
