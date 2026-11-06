@@ -1,0 +1,494 @@
+<section class="hero">
+    <p class="eyebrow">Entertainment and creator economy · Nigeria</p>
+    <h1>How we helped <span class="client">CREAM</span> stop losing customers to downtime and keep more of every sale</h1>
+    <p class="lede col">CREAM is a platform where African musicians and creators sell their work and fans win prizes for supporting them. When CREAM came to us, the platform went offline once or twice a week, was hard to change, and earned most of its money through a channel that gave a large share away. This is what we changed and what it did for the business.</p>
+    <div class="facts" role="list">
+      <div class="fact" role="listitem"><span class="num">0</span><span class="lab">weekly outages now, down from 1 to 2 every week</span></div>
+      <div class="fact" role="listitem"><span class="num">~35k</span><span class="lab">unique users a day across CREAM's tracked channels</span></div>
+      <div class="fact" role="listitem"><span class="num">4</span><span class="lab">ways to pay: airtime, CREAM tokens, card and bank transfer</span></div>
+      <div class="fact" role="listitem"><span class="num">90%</span><span class="lab">less mobile data needed to open a song page, after the November 2026 tune-up</span></div>
+    </div>
+  </section>
+
+  <section class="stack-lg">
+    <div class="stack col">
+      <p class="eyebrow">The client</p>
+      <h2>Who CREAM is</h2>
+      <p>CREAM (Creative, Reality, Entertainment, Art, Music) describes itself as Africa's first African-owned, direct-to-consumer super-fan platform. It was founded by Afrobeats artist D'banj and reports over 7 million subscribers across Nigeria.</p>
+      <p>The business has two kinds of customer:</p>
+      <ul class="plain">
+        <li><strong>Creators</strong> (musicians, video makers, comedians) who upload their work, sell it and get paid.</li>
+        <li><strong>Fans</strong> who stream, buy and download that work, and who take part in prize draws, celebrity auctions and talent contests.</li>
+      </ul>
+      <p>Fans reach CREAM in three ways: the website at creamplatform.com, the rewards site, and by dialling <strong>*463#</strong> on any MTN phone.</p>
+    </div>
+    <div class="shots-phone">
+      <figure>
+        <div class="shot"><img decoding="async" src="/work/cream/creamplatform-desktop.jpg" alt="CREAM home page on a desktop browser, showing the Celebrity Bid and CREAM Fund banners" width="1440" height="900"></div>
+        <figcaption>creamplatform.com today, on a laptop.</figcaption>
+      </figure>
+      <figure class="phone">
+        <div class="shot"><img loading="lazy" decoding="async" src="/work/cream/creamplatform-mobile.jpg" alt="CREAM home page on a phone" width="780" height="1688"></div>
+        <figcaption>The same page on a phone.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="stack-lg">
+    <div class="stack col">
+      <p class="eyebrow">Where things stood</p>
+      <h2>The problems CREAM brought to us</h2>
+      <p>None of these problems were about one bug. Each one cost the business money or customers every week.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Problem</th><th>What it cost the business</th></tr></thead>
+        <tbody>
+          <tr><td><strong>The site went down once or twice a week.</strong> The server was not set up to manage its resources, so busy periods knocked it over.</td><td>Every outage meant fans who could not buy, vote or enter a draw, and creators who could not sell. Some of those people did not come back.</td></tr>
+          <tr><td><strong>Everything was tangled together.</strong> The website, the business rules and the data all lived in one block of old PHP code. Changes were made directly on the live server.</td><td>Adding a feature or fixing a bug was slow and risky. One change could break an unrelated part of the site.</td></tr>
+          <tr><td><strong>It worked badly on phones.</strong> The layout broke on small screens.</td><td>Most CREAM fans use phones, so most visitors had a poor experience.</td></tr>
+          <tr><td><strong>Google could not read it.</strong> Song and creator pages were invisible to search engines.</td><td>A content business depends on people finding its content. CREAM was missing free traffic from search.</td></tr>
+          <tr><td><strong>Most sales came through airtime.</strong> Fans paid by dialling *463# and paying with phone credit.</td><td>Airtime payments are split with the mobile network and the company that connects CREAM to it, so CREAM kept a smaller share of each sale.</td></tr>
+          <tr><td><strong>Every app had its own login.</strong> CREAM runs at least four apps, and each one asked fans to sign in separately.</td><td>Fans moving from the main site to rewards or CreamPay had to sign in again, and some gave up. Each app also kept its own idea of who a customer was.</td></tr>
+          <tr><td><strong>Paying people was expensive.</strong> Staff, contest winners and artists were paid through outside banks.</td><td>Every payout carried bank charges, and money moved slowly.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="stack-lg">
+    <div class="stack col">
+      <p class="eyebrow">Plain-language explainer</p>
+      <h2>Why a business like CREAM needs USSD</h2>
+      <p>USSD is the menu that appears when you dial a code like <strong>*463#</strong>. It looks old-fashioned, but it solves a problem a website cannot: it works on <strong>any phone</strong>, including basic phones, with <strong>no internet and no data bundle</strong>. In Nigeria and across Africa, that means millions of people who would never open a website or install an app can still buy from you in a few seconds.</p>
+      <p>The customer pays with airtime, which they already have. That convenience has a cost: the mobile network and the aggregator (the company that connects a business to the network) each take a share of the payment.</p>
+    </div>
+    <figure>
+      <div class="diagram">
+        <svg viewBox="0 0 900 250" role="img" aria-labelledby="ussd-t">
+          <title id="ussd-t">How a USSD purchase works: the fan dials *463#, the request passes through MTN and the aggregator to CREAM's USSD service, airtime is charged, and the fan receives the song, draw entry or bid.</title>
+          <defs>
+            <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow"/></marker>
+            <marker id="ar-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-teal"/></marker>
+          </defs>
+          <rect x="10" y="60" width="150" height="90" rx="10" class="d-box-navy"/>
+          <text x="85" y="95" text-anchor="middle" class="d-t">Fan's phone</text>
+          <text x="85" y="115" text-anchor="middle" class="d-s">dials *463#</text>
+          <text x="85" y="132" text-anchor="middle" class="d-s">no internet needed</text>
+
+          <rect x="230" y="60" width="150" height="90" rx="10" class="d-box"/>
+          <text x="305" y="95" text-anchor="middle" class="d-t">MTN network</text>
+          <text x="305" y="115" text-anchor="middle" class="d-s">carries the menu</text>
+          <text x="305" y="132" text-anchor="middle" class="d-s">charges airtime</text>
+
+          <rect x="450" y="60" width="150" height="90" rx="10" class="d-box"/>
+          <text x="525" y="95" text-anchor="middle" class="d-t">Aggregator</text>
+          <text x="525" y="115" text-anchor="middle" class="d-s">connects CREAM</text>
+          <text x="525" y="132" text-anchor="middle" class="d-s">to the network</text>
+
+          <rect x="670" y="60" width="220" height="90" rx="10" class="d-box-teal"/>
+          <text x="780" y="95" text-anchor="middle" class="d-t">CREAM USSD service</text>
+          <text x="780" y="115" text-anchor="middle" class="d-s">shows the menu, records</text>
+          <text x="780" y="132" text-anchor="middle" class="d-s">the purchase, delivers it</text>
+
+          <line x1="160" y1="105" x2="226" y2="105" class="d-line" marker-end="url(#ar)"/>
+          <line x1="380" y1="105" x2="446" y2="105" class="d-line" marker-end="url(#ar)"/>
+          <line x1="600" y1="105" x2="666" y2="105" class="d-line" marker-end="url(#ar)"/>
+
+          <path d="M780 150 V205 H85 V154" class="d-line-teal" marker-end="url(#ar-teal)"/>
+          <text x="430" y="225" text-anchor="middle" class="d-s">Song download, draw entry, bid or vote sent back by SMS or on screen</text>
+
+          <text x="305" y="40" text-anchor="middle" class="d-bad">takes a share</text>
+          <text x="525" y="40" text-anchor="middle" class="d-bad">takes a share</text>
+        </svg>
+      </div>
+      <figcaption>A USSD sale reaches people with no internet, but the network and the aggregator each take a share before CREAM is paid.</figcaption>
+    </figure>
+    </section>
+
+  <section class="stack-lg">
+    <div class="stack col">
+      <p class="eyebrow">What we did</p>
+      <h2>Nine changes, each tied to a business result</h2>
+      <p>We use AI to write code faster, but the code is the easy part. The value is in understanding where a business is losing money or customers, deciding what to build, and checking that it works. Each change below starts from a business problem.</p>
+    </div>
+
+    <div class="work">
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14" opacity="0"/><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></div>
+          <h3>Stable servers that stay up</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Problem</dt><dd>The platform went offline once or twice a week because the server could not manage its load.</dd>
+          <dt class="s">What we built</dt><dd>We packaged the back end into containers, so each part runs in its own controlled space with the resources it needs. We replaced the old Apache web server with Nginx, which handles heavy traffic with far less strain. New versions now go live through an automatic process that checks the new version is healthy and switches back to the last good version on its own if it is not.</dd>
+          <dt class="r">Result</dt><dd><strong>No more weekly outages.</strong> An update now interrupts the site for under half a second, and a bad release can no longer take the site down.</dd>
+        </dl>
+      </article>
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+          <h3>One shared engine for every channel</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Problem</dt><dd>The website, the business rules and the data were one tangled block. Every change risked breaking something else.</dd>
+          <dt class="s">What we built</dt><dd>We separated the "front" (what customers see) from the "engine" (the rules about payments, draws, bids and payouts). The engine is now one central service, and the website, the rewards site, the USSD menu and the mobile app all use it.</dd>
+          <dt class="r">Result</dt><dd>A rule changes in one place and every channel gets it at once. New products, like a new contest or payment method, launch in days instead of weeks.</dd>
+        </dl>
+      </article>
+
+    </div>
+
+    <figure>
+      <div class="diagram">
+        <svg viewBox="0 0 900 330" role="img" aria-labelledby="arch-t">
+          <title id="arch-t">Before: website, business rules and data in one block on one Apache server, with changes made directly on the live server. After: a website, rewards site, USSD service and mobile app all connect to one central engine, which runs in containers behind Nginx.</title>
+          <defs>
+            <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-teal"/></marker>
+          </defs>
+          <text x="20" y="24" class="d-h">BEFORE</text>
+          <rect x="20" y="40" width="330" height="250" rx="12" class="d-box-bad"/>
+          <text x="185" y="72" text-anchor="middle" class="d-t">One block of old PHP on Apache</text>
+          <rect x="45" y="92" width="280" height="44" rx="8" class="d-box"/>
+          <text x="185" y="119" text-anchor="middle" class="d-s">Website pages</text>
+          <rect x="45" y="144" width="280" height="44" rx="8" class="d-box"/>
+          <text x="185" y="171" text-anchor="middle" class="d-s">Payments, draws, bids (business rules)</text>
+          <rect x="45" y="196" width="280" height="44" rx="8" class="d-box"/>
+          <text x="185" y="223" text-anchor="middle" class="d-s">Data</text>
+          <text x="185" y="270" text-anchor="middle" class="d-bad">Edited live · no testing · 1 to 2 outages a week</text>
+
+          <text x="420" y="24" class="d-h">AFTER</text>
+          <rect x="420" y="40" width="110" height="52" rx="8" class="d-box-navy"/>
+          <text x="475" y="71" text-anchor="middle" class="d-t">Website</text>
+          <rect x="540" y="40" width="110" height="52" rx="8" class="d-box-navy"/>
+          <text x="595" y="71" text-anchor="middle" class="d-t">Rewards</text>
+          <rect x="660" y="40" width="110" height="52" rx="8" class="d-box-navy"/>
+          <text x="715" y="71" text-anchor="middle" class="d-t">USSD *463#</text>
+          <rect x="780" y="40" width="100" height="52" rx="8" class="d-box-navy"/>
+          <text x="830" y="71" text-anchor="middle" class="d-t">Mobile app</text>
+
+          <line x1="475" y1="92" x2="600" y2="150" class="d-line-teal" marker-end="url(#ar2)"/>
+          <line x1="595" y1="92" x2="630" y2="150" class="d-line-teal" marker-end="url(#ar2)"/>
+          <line x1="715" y1="92" x2="680" y2="150" class="d-line-teal" marker-end="url(#ar2)"/>
+          <line x1="830" y1="92" x2="710" y2="150" class="d-line-teal" marker-end="url(#ar2)"/>
+
+          <rect x="520" y="154" width="280" height="76" rx="12" class="d-box-teal"/>
+          <text x="660" y="184" text-anchor="middle" class="d-t">One central engine (API)</text>
+          <text x="660" y="206" text-anchor="middle" class="d-s">payments · draws · bids · payouts</text>
+          <rect x="520" y="240" width="280" height="40" rx="8" class="d-box"/>
+          <text x="660" y="265" text-anchor="middle" class="d-s">Containers behind Nginx · data</text>
+          <text x="660" y="310" text-anchor="middle" class="d-good">Tested before release · automatic rollback · 0 weekly outages</text>
+        </svg>
+      </div>
+      <figcaption>Before and after. Every customer channel now uses the same engine, so rules change once and apply everywhere.</figcaption>
+    </figure>
+
+    <div class="work">
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg></div>
+          <h3>One login for every CREAM app</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Problem</dt><dd>CREAM runs at least four apps, including the main site, the rewards site and CreamPay. Each had its own login, so a fan signed in to one was a stranger to the others.</dd>
+          <dt class="s">What we built</dt><dd>A single CREAM account system that every app trusts, built on OAuth and OpenID Connect, the same open standards behind "Sign in with Google". Sign in on any CREAM app and you are signed in on all of them, without seeing another login screen. Sign out on one and you are signed out everywhere, which matters on shared phones.</dd>
+          <dt class="r">Result</dt><dd>Fans move between buying music, playing for prizes and managing their wallet without friction. CREAM sees one customer across every app, so a song bought on the main site can be matched to a draw entry on the rewards site, and new apps can join the same login in days.</dd>
+        </dl>
+      </article>
+
+    </div>
+
+    <figure>
+      <div class="diagram">
+        <svg viewBox="0 0 900 290" role="img" aria-labelledby="sso-t">
+          <title id="sso-t">One CREAM account at the centre, connected to the main site, the rewards site, CreamPay and other CREAM apps. Signing in on any app signs the fan in on all of them; signing out on any app signs them out of all of them.</title>
+          <defs>
+            <marker id="ar5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-teal"/></marker>
+          </defs>
+          <rect x="320" y="100" width="260" height="84" rx="14" class="d-box-teal"/>
+          <text x="450" y="134" text-anchor="middle" class="d-t">One CREAM account</text>
+          <text x="450" y="156" text-anchor="middle" class="d-s">OAuth · OpenID Connect</text>
+
+          <rect x="20" y="24" width="210" height="56" rx="8" class="d-box-navy"/>
+          <text x="125" y="50" text-anchor="middle" class="d-t">creamplatform.com</text>
+          <text x="125" y="68" text-anchor="middle" class="d-s">music, video, creators</text>
+          <rect x="20" y="204" width="210" height="56" rx="8" class="d-box-navy"/>
+          <text x="125" y="230" text-anchor="middle" class="d-t">Rewards</text>
+          <text x="125" y="248" text-anchor="middle" class="d-s">draws, spins, bids</text>
+          <rect x="670" y="24" width="210" height="56" rx="8" class="d-box-navy"/>
+          <text x="775" y="50" text-anchor="middle" class="d-t">CreamPay</text>
+          <text x="775" y="68" text-anchor="middle" class="d-s">wallet and payouts</text>
+          <rect x="670" y="204" width="210" height="56" rx="8" class="d-box-navy"/>
+          <text x="775" y="230" text-anchor="middle" class="d-t">Other CREAM apps</text>
+          <text x="775" y="248" text-anchor="middle" class="d-s">same login, nothing new to learn</text>
+
+          <path d="M320 120 C 270 120, 280 52, 234 52" class="d-line-teal" marker-start="url(#ar5)" marker-end="url(#ar5)"/>
+          <path d="M320 164 C 270 164, 280 232, 234 232" class="d-line-teal" marker-start="url(#ar5)" marker-end="url(#ar5)"/>
+          <path d="M580 120 C 630 120, 620 52, 666 52" class="d-line-teal" marker-start="url(#ar5)" marker-end="url(#ar5)"/>
+          <path d="M580 164 C 630 164, 620 232, 666 232" class="d-line-teal" marker-start="url(#ar5)" marker-end="url(#ar5)"/>
+
+          <text x="450" y="40" text-anchor="middle" class="d-good">Sign in once: signed in everywhere</text>
+          <text x="450" y="62" text-anchor="middle" class="d-s">no second login screen</text>
+          <text x="450" y="226" text-anchor="middle" class="d-good">Sign out once: signed out everywhere</text>
+          <text x="450" y="248" text-anchor="middle" class="d-s">safe on shared phones</text>
+        </svg>
+      </div>
+      <figcaption>Every CREAM app checks the same account, so one sign-in or sign-out applies to all of them.</figcaption>
+    </figure>
+
+    <div class="work">
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+          <h3>A website that works on every phone and shows up on Google</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Problem</dt><dd>The site broke on small screens, and song and creator pages could not be found on Google.</dd>
+          <dt class="s">What we built</dt><dd>We rebuilt the website from scratch so it adapts to any screen. We then moved it to a set-up (Next.js) that prepares each page in full before it reaches the visitor, which is what search engines need in order to read it. Every song, video and creator page now has its own title, description and share preview, and a site map lists about 2,700 content pages for Google. The site is available in English, Pidgin, Yoruba, Igbo, Hausa and French.</dd>
+          <dt class="r">Result</dt><dd>Fans can find CREAM's content through search, and links shared on WhatsApp and social media show a proper preview card. That brings in visitors without paid advertising.</dd>
+        </dl>
+      </article>
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/><circle cx="18" cy="16" r="3"/></svg></div>
+          <h3>A faster, safer USSD service</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Problem</dt><dd>The *463# menu ran on loose PHP scripts that were hard to change and test. The song list took over 10 seconds to load, long enough for the session to time out and the sale to be lost.</dd>
+          <dt class="s">What we built</dt><dd>We rebuilt the USSD service as one organised application that answers MTN exactly as before, so MTN did not have to change anything. It records every purchase before charging, never charges twice for the same request, and ignores duplicate payment confirmations. The song list now loads instantly from a copy that refreshes every five minutes. A phone simulator and about 190 automated checks let the team test every menu before customers see it.</dd>
+          <dt class="r">Result</dt><dd>Fans are not double-charged, nobody pays without receiving what they bought, and fewer sales are lost to timeouts. New games can be tested on staff phones before they go public.</dd>
+        </dl>
+      </article>
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
+          <h3>Direct payments that keep more of each sale</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Problem</dt><dd>Most revenue came through USSD airtime, which is shared with the mobile network and the aggregator.</dd>
+          <dt class="s">What we built</dt><dd>Fans can now buy on the website and app with CREAM tokens, a debit card or a bank transfer (through Paystack, with OPay being rolled out). USSD stays available for fans without internet.</dd>
+          <dt class="r">Result</dt><dd>Every sale that moves from airtime to a direct payment leaves more money with CREAM, because there is no network or aggregator share to pay.</dd>
+        </dl>
+      </article>
+
+    </div>
+
+    <figure>
+      <div class="diagram">
+        <svg viewBox="0 0 900 250" role="img" aria-labelledby="pay-t">
+          <title id="pay-t">Where the money from one sale goes. Paid with airtime over USSD: the mobile network and the aggregator take shares, and CREAM receives the rest. Paid directly with tokens, card or transfer: only a small payment processing fee is taken, and CREAM keeps most of the sale.</title>
+          <defs>
+            <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow"/></marker>
+          </defs>
+          <text x="20" y="30" class="d-h">PAID WITH AIRTIME (USSD)</text>
+          <rect x="20" y="44" width="130" height="56" rx="8" class="d-box-navy"/>
+          <text x="85" y="77" text-anchor="middle" class="d-t">Fan pays</text>
+          <line x1="150" y1="72" x2="196" y2="72" class="d-line" marker-end="url(#ar3)"/>
+          <rect x="200" y="44" width="120" height="56" rx="8" class="d-box-bad"/>
+          <text x="260" y="70" text-anchor="middle" class="d-s">Mobile network</text>
+          <text x="260" y="88" text-anchor="middle" class="d-bad">share</text>
+          <line x1="320" y1="72" x2="346" y2="72" class="d-line" marker-end="url(#ar3)"/>
+          <rect x="350" y="44" width="120" height="56" rx="8" class="d-box-bad"/>
+          <text x="410" y="70" text-anchor="middle" class="d-s">Aggregator</text>
+          <text x="410" y="88" text-anchor="middle" class="d-bad">share</text>
+          <line x1="470" y1="72" x2="496" y2="72" class="d-line" marker-end="url(#ar3)"/>
+          <rect x="500" y="44" width="200" height="56" rx="8" class="d-box"/>
+          <text x="600" y="77" text-anchor="middle" class="d-t">CREAM receives the rest</text>
+
+          <text x="20" y="150" class="d-h">PAID DIRECTLY (TOKENS, CARD, TRANSFER)</text>
+          <rect x="20" y="164" width="130" height="56" rx="8" class="d-box-navy"/>
+          <text x="85" y="197" text-anchor="middle" class="d-t">Fan pays</text>
+          <line x1="150" y1="192" x2="196" y2="192" class="d-line" marker-end="url(#ar3)"/>
+          <rect x="200" y="164" width="120" height="56" rx="8" class="d-box"/>
+          <text x="260" y="190" text-anchor="middle" class="d-s">Payment</text>
+          <text x="260" y="208" text-anchor="middle" class="d-s">processing fee</text>
+          <line x1="320" y1="192" x2="496" y2="192" class="d-line" marker-end="url(#ar3)"/>
+          <rect x="500" y="164" width="380" height="56" rx="8" class="d-box-teal"/>
+          <text x="690" y="197" text-anchor="middle" class="d-t">CREAM keeps most of the sale</text>
+        </svg>
+      </div>
+      <figcaption>The same sale, two routes. The diagram shows who takes a share; the exact percentages depend on CREAM's agreements.</figcaption>
+    </figure>
+
+    <div class="work">
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 10h18M5 10V20h14V10M3 10l2-5h14l2 5M10 14h4"/></svg></div>
+          <h3>CreamPay: CREAM's own digital bank</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Problem</dt><dd>CREAM paid staff, contest winners and artists through outside banks, and paid bank charges on every transfer.</dd>
+          <dt class="s">What we built</dt><dd>CreamPay (pay.creamplatform.com), a wallet for creators and businesses. Users send, spend and receive money in naira, US dollars, euros and pounds, with virtual cards and instant transfers. CREAM now runs its own payouts through it: staff salaries, Best of the Streets winners, artist earnings and prize-draw winners.</dd>
+          <dt class="r">Result</dt><dd>Most of the bank fees on payouts are gone, money reaches people faster, and winners and artists stay inside the CREAM world, where they can spend their earnings on the platform.</dd>
+        </dl>
+      </article>
+
+    </div>
+
+    <figure>
+      <div class="diagram">
+        <svg viewBox="0 0 900 260" role="img" aria-labelledby="cp-t">
+          <title id="cp-t">CreamPay sits at the centre of CREAM's payouts. Money goes out from CreamPay to staff salaries, artist earnings, Best of the Streets winners and rewards winners, without passing through outside banks.</title>
+          <defs>
+            <marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-gold"/></marker>
+          </defs>
+          <rect x="330" y="90" width="240" height="80" rx="14" class="d-box-gold"/>
+          <text x="450" y="125" text-anchor="middle" class="d-t">CreamPay</text>
+          <text x="450" y="146" text-anchor="middle" class="d-s">NGN · USD · EUR · GBP</text>
+
+          <rect x="20" y="20" width="200" height="56" rx="8" class="d-box"/>
+          <text x="120" y="53" text-anchor="middle" class="d-t">Staff salaries</text>
+          <rect x="20" y="184" width="200" height="56" rx="8" class="d-box"/>
+          <text x="120" y="217" text-anchor="middle" class="d-t">Artist earnings</text>
+          <rect x="680" y="20" width="200" height="56" rx="8" class="d-box"/>
+          <text x="780" y="47" text-anchor="middle" class="d-t">Best of the Streets</text>
+          <text x="780" y="65" text-anchor="middle" class="d-s">contest winners</text>
+          <rect x="680" y="184" width="200" height="56" rx="8" class="d-box"/>
+          <text x="780" y="211" text-anchor="middle" class="d-t">Rewards winners</text>
+          <text x="780" y="229" text-anchor="middle" class="d-s">draws, spins, bids</text>
+
+          <path d="M330 112 C 280 112, 270 48, 224 48" class="d-line-gold" marker-end="url(#ar4)"/>
+          <path d="M330 148 C 280 148, 270 212, 224 212" class="d-line-gold" marker-end="url(#ar4)"/>
+          <path d="M570 112 C 620 112, 630 48, 676 48" class="d-line-gold" marker-end="url(#ar4)"/>
+          <path d="M570 148 C 620 148, 630 212, 676 212" class="d-line-gold" marker-end="url(#ar4)"/>
+        </svg>
+      </div>
+      <figcaption>Every payout now starts from CREAM's own wallet instead of an outside bank.</figcaption>
+    </figure>
+
+    <div class="work">
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.3 6.8 19l1-5.8L3.6 9.1l5.8-.8z"/></svg></div>
+          <h3>Rewards that make every purchase worth more</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Problem</dt><dd>Buying a song was a one-off transaction, with little reason to come back the next day.</dd>
+          <dt class="s">What we built</dt><dd>Buying a song now enters the fan into a cash prize draw automatically. The rewards site (rewards.creamplatform.com) adds Koko Draw, Spin D' Koko, and lowest-unique-bid auctions for cash and celebrity items. In those auctions the winner is the lowest bid nobody else placed: if two fans both bid 1, then 1 is no longer unique and 2 becomes the lowest unique bid. Best of the Streets lets talent register, upload a performance video and collect public votes, with a live results screen at the watch-party venue.</dd>
+          <dt class="r">Result</dt><dd>Fans have a reason to come back daily, every purchase supports a creator, and CREAM sells more content because of the prizes attached.</dd>
+        </dl>
+      </article>
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.5 6h7M7.3 8.2l3.5 7.6M16.7 8.2l-3.5 7.6"/></svg></div>
+          <h3>A professional way of working</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Problem</dt><dd>There was no company code repository and no review step. Changes went straight onto the live server.</dd>
+          <dt class="s">What we built</dt><dd>A company GitHub account where every change is reviewed and automatically checked before it goes live, with a message posted to the team's Slack after each release. We also added user analytics (Amplitude), so CREAM can see which features fans use and where purchases drop off.</dd>
+          <dt class="r">Result</dt><dd>CREAM owns its code, can bring in new developers safely, and makes product decisions from real usage data instead of guesses.</dd>
+        </dl>
+      </article>
+
+    </div>
+
+    <figure>
+      <div class="shots-2">
+        <figure>
+          <div class="shot"><img loading="lazy" decoding="async" src="/work/cream/rewards-desktop.jpg" alt="CREAM Rewards site showing Spin D Koko, Koko Number and Celebrity Bid games" width="1440" height="900"></div>
+          <figcaption>rewards.creamplatform.com: draws, spins and celebrity auctions.</figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img loading="lazy" decoding="async" src="/work/cream/creampay-desktop.jpg" alt="CreamPay home page: the wallet for creators and businesses, with NGN, USD, EUR and GBP" width="1440" height="900"></div>
+          <figcaption>pay.creamplatform.com: CREAM's own wallet for payouts.</figcaption>
+        </figure>
+      </div>
+    </figure>
+    </section>
+
+  <section class="stack-lg">
+    <div class="stack col">
+      <p class="eyebrow">Results</p>
+      <h2>What changed for the business</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Measure</th><th>Before</th><th>After</th></tr></thead>
+        <tbody>
+          <tr><td>Outages</td><td class="was">1 to 2 every week</td><td class="now">None</td></tr>
+          <tr><td>Interruption when releasing an update</td><td class="was">Site often broke during changes</td><td class="now">Under half a second, with automatic rollback</td></tr>
+          <tr><td>USSD song list load time</td><td class="was">Over 10 seconds</td><td class="now">Instant</td></tr>
+          <tr><td>Double charges and paid-but-not-delivered orders</td><td class="was">Possible</td><td class="now">Blocked by design</td></tr>
+          <tr><td>Ways to pay</td><td class="was">Mostly airtime</td><td class="now">Airtime, tokens, card, transfer</td></tr>
+          <tr><td>Payouts to staff, artists and winners</td><td class="was">Outside banks, with fees on each transfer</td><td class="now">Through CreamPay</td></tr>
+          <tr><td>Pages Google can index</td><td class="was">Content pages not readable</td><td class="now">About 2,700 content pages listed</td></tr>
+          <tr><td>Languages</td><td class="was">English</td><td class="now">6</td></tr>
+          <tr><td>Logins across CREAM apps</td><td class="was">A separate sign-in for each app</td><td class="now">One sign-in for all of them</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure>
+      <div class="shot"><img loading="lazy" decoding="async" src="/work/cream/amplitude-daily-active-users.png" alt="Amplitude chart of daily active users by site, 30 October to 6 November 2026, around 32,000 to 38,000 a day" width="980" height="539"></div>
+      <figcaption>Daily unique users, 30 October to 5 November 2026, from CREAM's Amplitude analytics: between about 32,000 and 38,000 people a day. The drop on 6 November is the current day, still in progress when the chart was exported.</figcaption>
+    </figure>
+  </section>
+
+  <section class="stack-lg" id="speed">
+    <div class="stack col">
+      <p class="eyebrow">November 2026 tune-up</p>
+      <h2>Making the website faster on ordinary phones</h2>
+      <p>Most CREAM fans browse on mid-range Android phones over mobile data. We measured the website the way Google does, using Lighthouse, Google's free website-testing tool, with a simulated mid-range phone on a 4G connection. The tests found three things slowing the site down:</p>
+      <ul class="plain">
+        <li><strong>Oversized photos.</strong> Small profile pictures were being downloaded at full camera size. One 36-pixel comment avatar was a 6 MB file.</li>
+        <li><strong>Analytics loading first.</strong> The analytics tool, including its session recorder, loaded before the page could respond to taps.</li>
+        <li><strong>Accessibility gaps.</strong> The page blocked pinch-to-zoom, and some headings were out of order for screen readers.</li>
+      </ul>
+      <p>We fixed all three. Photos are now resized to the size they are shown at, analytics loads once the page is ready (still recording everything it did before), and zoom and heading order are fixed. We also flagged a few light grey and yellow text colours that are hard to read, for CREAM's designer to review, since those are brand decisions. For fans who pay for every megabyte of mobile data, a lighter page is a cheaper page, and a page that opens sooner is a sale that is less likely to be abandoned.</p>
+    </div>
+
+    <figure class="stack">
+      <div class="legend"><span><i style="background: var(--line)"></i>Before</span><span><i style="background: var(--teal-fill)"></i>After</span></div>
+      <div class="bars-wrap">
+        <div class="bars" role="img" aria-label="Data downloaded to open each page on a phone. Song page: 10.0 MB before, 1.0 MB after. Home page: 6.3 MB before, 1.8 MB after. Koko Draw: 1.3 MB before, 0.6 MB after. Subscriptions: 0.5 MB before, 0.4 MB after.">
+          <div class="bar-row"><span class="name">Song page</span><div class="bar-pair"><div class="bar before"><span style="width: 91.2%"></span><em style="left: calc(91.2% + 8px)">10.0 MB</em></div><div class="bar after"><span style="width: 9.3%"></span><em style="left: calc(9.3% + 8px)">1.0 MB</em></div></div></div>
+          <div class="bar-row"><span class="name">Home page</span><div class="bar-pair"><div class="bar before"><span style="width: 57.6%"></span><em style="left: calc(57.6% + 8px)">6.3 MB</em></div><div class="bar after"><span style="width: 15.9%"></span><em style="left: calc(15.9% + 8px)">1.8 MB</em></div></div></div>
+          <div class="bar-row"><span class="name">Koko Draw</span><div class="bar-pair"><div class="bar before"><span style="width: 12%"></span><em style="left: calc(12% + 8px)">1.3 MB</em></div><div class="bar after"><span style="width: 5.5%"></span><em style="left: calc(5.5% + 8px)">0.6 MB</em></div></div></div>
+          <div class="bar-row"><span class="name">Subscriptions</span><div class="bar-pair"><div class="bar before"><span style="width: 4.5%"></span><em style="left: calc(4.5% + 8px)">0.5 MB</em></div><div class="bar after"><span style="width: 3.3%"></span><em style="left: calc(3.3% + 8px)">0.4 MB</em></div></div></div>
+        </div>
+      </div>
+      <figcaption>Data a phone downloads to open each page. Lighthouse, simulated mid-range phone on 4G, median of three runs per page, 6 November 2026.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Page (on a phone)</th><th class="num">Ready to use before</th><th class="num">Ready to use after</th><th class="num">Accessibility before</th><th class="num">Accessibility after</th></tr></thead>
+        <tbody>
+          <tr><td>Home page</td><td class="num was">10.4 s</td><td class="num now">6.6 s</td><td class="num was">90</td><td class="num now">96</td></tr>
+          <tr><td>Song page</td><td class="num was">12.2 s</td><td class="num now">9.0 s</td><td class="num was">91</td><td class="num now">96</td></tr>
+          <tr><td>Koko Draw</td><td class="num was">8.9 s</td><td class="num now">5.1 s</td><td class="num was">93</td><td class="num now">100</td></tr>
+          <tr><td>Subscriptions</td><td class="num was">4.2 s</td><td class="num now">4.0 s</td><td class="num was">89</td><td class="num now">96</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted col">"Ready to use" is the time until the page responds reliably to taps (Lighthouse's Time to Interactive), on a deliberately slowed-down test phone, so real phones on good connections are faster. Accessibility is Lighthouse's score out of 100. Layout shift, which measures content jumping around while it loads, was already 0 and stays 0.</p>
+
+    <figure>
+      <div class="shots-2">
+        <figure>
+          <div class="shot"><img loading="lazy" decoding="async" src="/work/cream/lighthouse-home-before.jpg" alt="Lighthouse scores before: performance 74, accessibility 90, best practices 96" width="720" height="210"></div>
+          <figcaption>Home page on a laptop, before.</figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img loading="lazy" decoding="async" src="/work/cream/lighthouse-home-after.jpg" alt="Lighthouse scores after: performance 95, accessibility 96, best practices 96" width="720" height="210"></div>
+          <figcaption>The same page after: performance 74 to 95.</figcaption>
+        </figure>
+      </div>
+    </figure>
+  </section>
+
+  <section class="stack col">
+    <p class="eyebrow">What this means for you</p>
+    <h2>The same approach works for your business</h2>
+    <p>CREAM's problems are common: a system that breaks under load, software that is risky to change, payment routes that give money away, and fees on moving money. We start by finding where your business loses money or customers, then build only what fixes it, and we measure the result.</p>
+    <p class="callout">AI now writes much of the code. Knowing what to build, and proving it worked, is what we do.</p>
+  </section>

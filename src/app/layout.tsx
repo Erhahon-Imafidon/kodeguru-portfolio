@@ -14,9 +14,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const title = "Erhahon Imafidon — Software Engineer, Fintech & Media Platforms";
+const title = "Kodeguru Tech Solutions — Software & automation by Erhahon Imafidon";
 const description =
-  "Erhahon Imafidon builds web and mobile products for fintech and media companies in Nigeria, and the automated systems that run the business behind them.";
+  "Kodeguru Tech Solutions, led by Erhahon Imafidon, builds websites, mobile apps, payments and business automation for companies in Nigeria and abroad. Read the client case studies.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -38,6 +38,11 @@ export const metadata: Metadata = {
     "payments",
     "OIDC",
     "business automation",
+    "case studies",
+    "web development Nigeria",
+    "WordPress plugin development",
+    "Stripe",
+    "Paystack",
     "n8n",
     "Abuja",
     "Nigeria",
@@ -58,17 +63,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    siteName: "Erhahon Imafidon",
+    siteName: "Kodeguru Tech Solutions",
     locale: "en_NG",
-    title: "Erhahon Imafidon — Software Engineer",
+    title: "Kodeguru Tech Solutions — Software & automation",
     description:
-      "Web and mobile products for fintech and media companies, and the automated systems behind them.",
+      "Websites, mobile apps, payments and automation for businesses in Nigeria and abroad, led by Erhahon Imafidon.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Erhahon Imafidon — Software Engineer",
+    title: "Kodeguru Tech Solutions — Software & automation",
     description:
-      "Web and mobile products for fintech and media companies, and the automated systems behind them.",
+      "Websites, mobile apps, payments and automation for businesses in Nigeria and abroad, led by Erhahon Imafidon.",
   },
 };
 
