@@ -26,21 +26,20 @@ export function WhyUs() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
           <Reveal>
             <h2 className="font-display text-[clamp(28px,4.2vw,42px)] leading-[1.1] font-bold tracking-[-0.03em]">
-              Anyone can generate code now.{" "}
-              <span className="grad-text">Knowing what to build is the hard part.</span>
+              Software that looks finished is easy.{" "}
+              <span className="grad-text">Software that grows your business is the hard part.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.08}>
             <div className="space-y-[18px] text-[16.5px] text-ink-soft">
               <p>
-                AI tools can write an app in an afternoon. They do not know your customers, how money
-                moves through your business, or which repetitive task is quietly costing you the most.
-                That is why so much AI-built software looks finished and still does not help.
+                Plenty of software looks finished on launch day and still does not help. It was built
+                without knowing your customers, how money moves through your business, or which
+                repetitive task is quietly costing you the most.
               </p>
               <p>
-                We use AI to build faster, and an engineer stays accountable for every line. Our job
-                is to point that speed at the right problem, and make sure the result survives real
-                customers, real payments and real traffic.
+                We start there. Every line we ship is engineered, tested and owned by us, and built to
+                survive real customers, real payments and real traffic.
               </p>
             </div>
           </Reveal>

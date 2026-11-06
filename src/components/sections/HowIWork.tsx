@@ -7,22 +7,20 @@ export function HowIWork() {
     <section id="practice" className="py-21">
       <div className="wrap">
         <Reveal>
-          <SectionTitle>How I work</SectionTitle>
+          <SectionTitle>How we work</SectionTitle>
         </Reveal>
         <Reveal>
           <div className="max-w-[66ch] space-y-[18px]">
             <p>
-              I work in production codebases where the cost of a mistake is real, so most of my
-              habits are about making changes safe rather than fast: architecture written down where
-              the next person will find it, every change logged, nothing reaching the main branch
-              without review.
+              Every project starts with how your business makes money, and where it is losing time,
+              customers or margin. The technology is chosen to serve that, never the other way
+              round.
             </p>
             <p>
-              I use AI coding tools heavily and deliberately. Every repository I work in carries its
-              own instruction file explaining the architecture and the decisions that look wrong but
-              aren&apos;t, so an assistant doesn&apos;t &ldquo;fix&rdquo; something deliberate. Agents
-              log what they changed and never commit — I review and commit myself. It is the same
-              discipline you would apply to a junior engineer, which is roughly what these tools are.
+              You deal with one accountable person from the first call to launch. You get clear
+              updates in plain language, working pieces you can try as we go, and a finished product
+              that does what we agreed. The engineering is our responsibility, so you can stay
+              focused on running your business.
             </p>
           </div>
         </Reveal>
