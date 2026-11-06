@@ -1,0 +1,260 @@
+<section class="hero">
+    <p class="eyebrow">Publishing · Selling a digital book</p>
+    <h1>How we built a custom plugin so <span class="client">The Immigrant Stories</span> could sell its book online without it being passed around</h1>
+    <p class="lede col">The Immigrant Stories wanted to sell a book on its own website and take payment by card through Stripe. Its marketer set strict conditions: each buyer gets a private link that only they can use, and the book cannot be downloaded or easily copied. No existing WordPress plugin did all of that, so we built one. After five rounds of changes it did exactly what the client asked for.</p>
+    <div class="facts" role="list">
+      <div class="fact" role="listitem"><span class="num">1 link</span><span class="lab">per buyer, unique and emailed automatically the moment Stripe confirms payment</span></div>
+      <div class="fact" role="listitem"><span class="num">2</span><span class="lab">devices per link (the buyer's laptop and phone), so a forwarded link does not work</span></div>
+      <div class="fact" role="listitem"><span class="num">0</span><span class="lab">download buttons: the book is read page by page on the website</span></div>
+      <div class="fact" role="listitem"><span class="num">5</span><span class="lab">rounds of changes, until it matched the marketer's brief exactly</span></div>
+    </div>
+  </section>
+
+  <section class="stack-lg">
+    <div class="stack col">
+      <p class="eyebrow">The client</p>
+      <h2>Who The Immigrant Stories is</h2>
+      <p>The Immigrant Stories, founded by Samuel Ukeke, is a platform built by immigrants for immigrants. It publishes real stories of people who have built new lives abroad, step-by-step immigration guides, a podcast, and practical tools such as UK visa cost and points calculators.</p>
+      <p>The team wanted to sell a book directly to its audience on its own website, rather than through a bookshop that takes a large cut and owns the customer relationship.</p>
+    </div>
+    <div class="shots-phone">
+      <figure>
+        <div class="shot"><img decoding="async" src="/work/the-immigrant-stories/home-desktop.jpg" alt="The Immigrant Stories home page: Real Journeys, Expert Guides, One Global Community" width="1440" height="900"></div>
+        <figcaption>theimmigrantstories.com on a laptop.</figcaption>
+      </figure>
+      <figure class="phone">
+        <div class="shot"><img loading="lazy" decoding="async" src="/work/the-immigrant-stories/home-mobile.jpg" alt="The Immigrant Stories home page on a phone" width="780" height="1688"></div>
+        <figcaption>The same page on a phone.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="stack-lg">
+    <div class="stack col">
+      <p class="eyebrow">The brief</p>
+      <h2>Sell the book, but keep it from being shared</h2>
+      <p>A digital book has one big weakness: once someone has the file, they can send it to anyone. One paid copy can become a hundred free ones overnight. The marketer's conditions were designed to stop that.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>The marketer's condition</th><th>Why it mattered</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Payment by card through Stripe.</strong></td><td>Readers in the UK and abroad can pay in a way they already trust, and money goes straight to the client.</td></tr>
+          <tr><td><strong>A unique link for each buyer.</strong> No accounts or passwords to create.</td><td>Buying had to be quick. Every extra step loses sales.</td></tr>
+          <tr><td><strong>Only the buyer can open their link.</strong></td><td>A link forwarded to friends or posted in a group chat must not work.</td></tr>
+          <tr><td><strong>No downloading, saving or copying.</strong></td><td>If the file can be saved, it can be shared, and every shared copy is a lost sale.</td></tr>
+          <tr><td><strong>A view of who has bought and who has opened it.</strong></td><td>The team needed to track sales and help buyers who had trouble.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stack col">
+      <h3>Why an off-the-shelf plugin would not do</h3>
+      <p>WordPress has many plugins for selling digital products, but none fitted this brief. Most simply email the buyer a file to download, which is the very thing the marketer wanted to avoid. Others lock content behind a full membership system with accounts and passwords, which adds friction for someone buying one book. Rather than force the client to accept a compromise, we built a plugin that did exactly what was asked.</p>
+    </div>
+  </section>
+
+  <section class="stack-lg">
+    <div class="stack col">
+      <p class="eyebrow">What we did</p>
+      <h2>Four parts, each tied to a business need</h2>
+      <p>We use AI to write code faster, but the code is the easy part. The value is in turning a marketer's conditions into rules the software can enforce, and in testing with the client until it works the way they imagined. Each part below starts from one of those conditions.</p>
+    </div>
+
+    <figure>
+      <div class="diagram">
+        <svg viewBox="0 0 900 220" role="img" aria-labelledby="buy-t">
+          <title id="buy-t">From payment to reading: the buyer pays on Stripe, Stripe confirms the payment to the website, the plugin creates a unique private link, the link is emailed to the buyer, and the buyer reads the book on the website. No one on the team has to do anything.</title>
+          <defs>
+            <marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-teal"/></marker>
+          </defs>
+          <text x="20" y="24" class="d-h">FROM PAYMENT TO READING, WITH NO ONE ON THE TEAM INVOLVED</text>
+          <g>
+            <rect x="20" y="44" width="152" height="100" rx="10" class="d-box-navy"/>
+            <text x="34" y="66" class="d-n">STEP 1</text>
+            <text x="34" y="92" class="d-t">Buyer pays</text>
+            <text x="34" y="112" class="d-s">by card on</text>
+            <text x="34" y="128" class="d-s">Stripe</text>
+          </g>
+          <line x1="172" y1="94" x2="194" y2="94" class="d-line-teal" marker-end="url(#arb)"/>
+          <g>
+            <rect x="197" y="44" width="152" height="100" rx="10" class="d-box-teal"/>
+            <text x="211" y="66" class="d-n">STEP 2</text>
+            <text x="211" y="92" class="d-t">Stripe confirms</text>
+            <text x="211" y="112" class="d-s">the website checks</text>
+            <text x="211" y="128" class="d-s">it is really Stripe</text>
+          </g>
+          <line x1="349" y1="94" x2="371" y2="94" class="d-line-teal" marker-end="url(#arb)"/>
+          <g>
+            <rect x="374" y="44" width="152" height="100" rx="10" class="d-box-teal"/>
+            <text x="388" y="66" class="d-n">STEP 3</text>
+            <text x="388" y="92" class="d-t">Private link</text>
+            <text x="388" y="112" class="d-s">made for this</text>
+            <text x="388" y="128" class="d-s">buyer only</text>
+          </g>
+          <line x1="526" y1="94" x2="548" y2="94" class="d-line-teal" marker-end="url(#arb)"/>
+          <g>
+            <rect x="551" y="44" width="152" height="100" rx="10" class="d-box-teal"/>
+            <text x="565" y="66" class="d-n">STEP 4</text>
+            <text x="565" y="92" class="d-t">Emailed</text>
+            <text x="565" y="112" class="d-s">to the address</text>
+            <text x="565" y="128" class="d-s">used at checkout</text>
+          </g>
+          <line x1="703" y1="94" x2="725" y2="94" class="d-line-teal" marker-end="url(#arb)"/>
+          <g>
+            <rect x="728" y="44" width="152" height="100" rx="10" class="d-box-client"/>
+            <text x="742" y="66" class="d-n">STEP 5</text>
+            <text x="742" y="92" class="d-t">Buyer reads</text>
+            <text x="742" y="112" class="d-s">on the website,</text>
+            <text x="742" y="128" class="d-s">page by page</text>
+          </g>
+          <text x="450" y="186" text-anchor="middle" class="d-s">Every sale is delivered within moments, at any hour, and every link is recorded in the dashboard.</text>
+        </svg>
+      </div>
+      <figcaption>The whole sale runs on its own. The team only steps in if a buyer asks for help.</figcaption>
+    </figure>
+
+    <div class="work">
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
+          <h3>Stripe payments that deliver the book by themselves</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Need</dt><dd>Take card payments and get the book to each buyer straight away, without staff sending anything by hand.</dd>
+          <dt class="s">What we built</dt><dd>The website listens for Stripe's "payment complete" message. Before acting on it, the plugin checks a secret signature so that only genuine messages from Stripe are accepted and nobody can fake a purchase. It then creates the buyer's private link and emails it to the address they used at checkout, with plain instructions on how the link works.</dd>
+          <dt class="r">Result</dt><dd>Sales are delivered in moments, day or night, with no manual work. Fake purchase requests are rejected.</dd>
+        </dl>
+      </article>
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg></div>
+          <h3>A private link that only works for the person who paid</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Need</dt><dd>Stop a link being forwarded to friends or shared in group chats.</dd>
+          <dt class="s">What we built</dt><dd>Each link carries a long random code that cannot be guessed. The first time the buyer opens it, the link locks itself to that browser. The client chose to allow two devices, so a buyer can read on both laptop and phone. A third device, such as a friend's phone, sees an "already claimed" message instead of the book. Links can also expire after a set number of days and carry a generous limit on how many times they can be opened.</dd>
+          <dt class="r">Result</dt><dd>One payment gives one reader access. Sharing the link no longer gives the book away, and buyers do not have to create an account or remember a password.</dd>
+        </dl>
+      </article>
+
+    </div>
+
+    <figure>
+      <div class="diagram">
+        <svg viewBox="0 0 900 230" role="img" aria-labelledby="dev-t">
+          <title id="dev-t">One link, locked to the buyer: the buyer's laptop opens the book, the buyer's phone opens the book, and a friend's phone with the forwarded link is refused with an already-claimed message.</title>
+          <defs>
+            <marker id="ard" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-teal"/></marker>
+            <marker id="ard-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow"/></marker>
+          </defs>
+          <text x="20" y="24" class="d-h">ONE LINK, LOCKED TO THE BUYER'S OWN DEVICES</text>
+          <rect x="20" y="86" width="210" height="70" rx="10" class="d-box-client"/>
+          <text x="125" y="115" text-anchor="middle" class="d-t">The buyer's link</text>
+          <text x="125" y="135" text-anchor="middle" class="d-s">emailed after payment</text>
+          <path d="M230 106 C 300 106, 300 64, 366 64" class="d-line-teal" marker-end="url(#ard)"/>
+          <path d="M230 121 L 366 121" class="d-line-teal" marker-end="url(#ard)"/>
+          <path d="M230 136 C 300 136, 300 180, 366 180" class="d-line-bad" marker-end="url(#ard-b)"/>
+          <rect x="370" y="40" width="250" height="48" rx="8" class="d-box-navy"/>
+          <text x="388" y="69" class="d-t">Device 1: buyer's laptop</text>
+          <rect x="370" y="97" width="250" height="48" rx="8" class="d-box-navy"/>
+          <text x="388" y="126" class="d-t">Device 2: buyer's phone</text>
+          <rect x="370" y="156" width="250" height="48" rx="8" class="d-box-bad"/>
+          <text x="388" y="185" class="d-t">Friend's phone (forwarded)</text>
+          <path d="M650 58l6 6 11-12" class="d-check"/><text x="680" y="69" class="d-good">Book opens</text>
+          <path d="M650 115l6 6 11-12" class="d-check"/><text x="680" y="126" class="d-good">Book opens</text>
+          <text x="650" y="185" class="d-bad">"Already claimed" message</text>
+        </svg>
+      </div>
+      <figcaption>The number of devices is a setting. The client chose two, so buyers can read on their laptop and their phone.</figcaption>
+    </figure>
+
+    <div class="work">
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/><path d="M3 21L21 3" /></svg></div>
+          <h3>A reader that keeps the book on the website</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Need</dt><dd>Let buyers read comfortably while making it impractical to download, save or copy the book.</dd>
+          <dt class="s">What we built</dt><dd>The book opens in a reader on a private page of the website and is shown one page at a time, drawn as an image rather than as text that can be selected and copied. There is no download button. Right-click and the save, print and view-source keyboard shortcuts are switched off on the page. The real location of the book file is never shown in the browser: each time the reader loads, the website issues a permission that expires after two minutes, so a copied address stops working almost at once. The reader also shows the buyer when their link expires and how many views they have left.</dd>
+          <dt class="r">Result</dt><dd>Buyers get a simple reading experience, and the book stays where the client can control it. No website can stop someone photographing a screen with a second phone. The aim was to make saving and sharing the book impractical, and the client signed this off.</dd>
+        </dl>
+      </article>
+
+      <article class="item">
+        <header>
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></div>
+          <h3>A dashboard to see every buyer and help them</h3>
+        </header>
+        <dl class="psr">
+          <dt class="p">Need</dt><dd>Know how many people have bought the book, whether they have opened it, and sort out problems quickly.</dd>
+          <dt class="s">What we built</dt><dd>A page in the WordPress admin listing every buyer: their email, when they bought, how many devices they have used, how many times they have opened the book, when their link expires, and its status (active, expired, view limit reached or devices full). Each buyer has one-click actions: give more days, add more views, reset their devices when they get a new phone, or cancel the link, for example after a refund. The same page holds the settings: how long links last, how many views and how many devices each link allows.</dd>
+          <dt class="r">Result</dt><dd>The team can see sales and reading activity at a glance, and fix any buyer's problem in seconds without calling a developer.</dd>
+        </dl>
+      </article>
+
+    </div>
+
+    <figure>
+      <div class="mock">
+        <div class="mock-bar"><i></i><i></i><i></i><span>WordPress admin · Secure PDF Access · Access log</span></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Buyer</th><th>Devices</th><th>Opened</th><th>Expires</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody>
+              <tr><td>reader.one@example.com</td><td>2 / 2</td><td>14 times</td><td>12 Dec</td><td><span class="st st-warn">Devices full</span></td><td class="acts">Extend · Add views · Reset devices · Revoke</td></tr>
+              <tr><td>reader.two@example.com</td><td>1 / 2</td><td>6 times</td><td>15 Dec</td><td><span class="st st-ok">Active</span></td><td class="acts">Extend · Add views · Reset devices · Revoke</td></tr>
+              <tr><td>reader.three@example.com</td><td>0 / 2</td><td>Not yet</td><td>18 Dec</td><td><span class="st st-ok">Active</span></td><td class="acts">Extend · Add views · Reset devices · Revoke</td></tr>
+              <tr><td>reader.four@example.com</td><td>1 / 2</td><td>9 times</td><td>2 Nov</td><td><span class="st st-bad">Expired</span></td><td class="acts">Extend · Add views · Reset devices</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <figcaption>An illustration of the buyer dashboard with made-up buyers. The columns and actions match the real plugin.</figcaption>
+    </figure>
+    </section>
+
+  <section class="stack-lg">
+    <div class="stack col">
+      <p class="eyebrow">Getting it right</p>
+      <h2>Five rounds to get the balance right</h2>
+      <p>A plugin like this has to balance two things that pull against each other: strict protection for the client, and an easy experience for honest buyers. Too loose, and the book gets shared. Too strict, and paying readers get locked out and ask for refunds. We worked through five versions with the client. Along the way we:</p>
+      <ul class="plain">
+        <li>allowed two devices per link, so buyers can move between laptop and phone;</li>
+        <li>raised the view limit so that normal reading never hits it, and fixed early links that had been set too low;</li>
+        <li>removed an occasional failure where the book would not load on the first try, by making each page's permission self-checking instead of waiting on the database;</li>
+        <li>added the dashboard tools to extend, reset or cancel any buyer's link in one click.</li>
+      </ul>
+      <p>Version five was the one the client wanted.</p>
+    </div>
+  </section>
+
+  <section class="stack-lg">
+    <div class="stack col">
+      <p class="eyebrow">Results</p>
+      <h2>What changed for the client</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Need</th><th>Without the plugin</th><th>With the plugin</th></tr></thead>
+        <tbody>
+          <tr><td>Selling the book</td><td class="was">Through a third party, or by sending files by hand</td><td class="now">On the client's own website, paid through Stripe</td></tr>
+          <tr><td>Delivering it</td><td class="was">Someone sends each buyer the file</td><td class="now">Private link emailed automatically, in moments</td></tr>
+          <tr><td>Stopping sharing</td><td class="was">A file can be forwarded to anyone</td><td class="now">Link works only on the buyer's own devices</td></tr>
+          <tr><td>Downloading and copying</td><td class="was">The file is the product</td><td class="now">No download, read page by page on the site</td></tr>
+          <tr><td>Knowing who bought and read it</td><td class="was">Piece it together from payment emails</td><td class="now">One dashboard: buyers, devices, views, status</td></tr>
+          <tr><td>Helping a buyer with a new phone</td><td class="was">Ask a developer</td><td class="now">"Reset devices" in one click</td></tr>
+        </tbody>
+      </table>
+    </div>
+    </section>
+
+  <section class="stack col">
+    <p class="eyebrow">What this means for you</p>
+    <h2>When nothing off the shelf fits, we build what does</h2>
+    <p>Most businesses are told to pick the nearest ready-made tool and live with its limits. Sometimes that is the right call, and we will say so. When the tool does not fit, for example when you need to sell digital content, courses or reports without them being shared, we build exactly what your business needs and keep refining it with you until it works the way you imagined.</p>
+    <p class="callout">AI now writes much of the code. Turning your conditions into rules the software enforces is what we do.</p>
+  </section>
